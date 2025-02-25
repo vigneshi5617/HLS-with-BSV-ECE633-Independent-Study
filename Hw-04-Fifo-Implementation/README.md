@@ -6,7 +6,7 @@ This Makefile provides a streamlined way to **compile, simulate, and verify** th
 
 ## **📂 Directory Structure**
 ```
-project-root/
+Hw-04-Fifo-Implementation/
 │── src_bsv/                   # Contains BSV source files
 │   ├── fifo_example_testbench.bsv   # BSV testbench
 │── verilog/                    # Contains generated Verilog files
