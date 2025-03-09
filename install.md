@@ -57,6 +57,3 @@ sudo apt-get install iverilog -y
 sudo apt-get install gtkwave -y
 ```
 
----
-
-This `install.md` file provides a structured, easy-to-follow guide for installing the necessary tools. You can add it to your GitHub repository and modify it based on your needs. 🚀 Let me know if you need any further refinements! 😊
