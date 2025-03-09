@@ -1,6 +1,4 @@
-Sure! Below is a well-structured `install.md` file that you can use for your GitHub repository:  
 
----
 
 # **Installation Guide**  
 
