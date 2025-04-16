@@ -6,11 +6,6 @@ The code works for 1049 int and 1000 float test cases and the performance is see
 
 
 Make a clone of the mac folder in this repo. Run the following commands.
-## To activate pyenv
-
-```
-pyenv activate py38
-```
 
 ## To setup cocotb (remove any older versions and install v1.6.2)
 ```
