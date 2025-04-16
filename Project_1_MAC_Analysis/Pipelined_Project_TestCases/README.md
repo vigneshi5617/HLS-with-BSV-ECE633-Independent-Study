@@ -34,14 +34,10 @@ make simulate
 ```
 make clean_build
 ```
-
-
-Absolutely! Here's your professionally crafted `README.md` for the **Pipelined MAC Design**, aligned with your structure, showcasing performance improvements, technical depth, and your ownership.
-
 ---
 
 ## 📘 ECE-633: Pipelined Multiply-Accumulate (MAC) Design using Bluespec System Verilog  
-**Author**: Vignesh S  
+**Author**: Vignesh Anand  
 **Course**: High-Level Synthesis with Bluespec System Verilog  
 **Module**: Pipelined MAC Unit (Int8 + BF16)  
 **Toolchain**: BSC + Verilator + Cocotb  
@@ -86,11 +82,6 @@ The design is written entirely in BSV using atomic rules and FIFO communication,
 Pipelined_MAC/
 │
 ├── mac.bsv                      # Top-level pipelined MAC
-├── Libraries/                   # All arithmetic modules
-│   ├── cla.bsv
-│   ├── int_multiplier.bsv
-│   ├── fp32_adder.bsv
-│   ├── bf16_multiplier.bsv
 │
 ├── mac_verif/                   # Cocotb testbenches
 │   ├── test_mac.py
