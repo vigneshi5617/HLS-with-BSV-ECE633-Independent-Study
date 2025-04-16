@@ -1,0 +1,96 @@
+=== Generated schedule for mkMac ===
+
+Method schedule
+---------------
+Method: get_inputs
+Ready signal: True
+Sequenced before (restricted): get_inputs
+Sequenced after (restricted): mac_op
+ 
+Method: mac_op
+Ready signal: reg_output_valid
+Conflict-free: mac_op
+Sequenced before (restricted): get_inputs
+ 
+Rule schedule
+-------------
+Rule: reg_input_valid__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: reg_mult_int_valid__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: reg_mult_bf_valid__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: reg_add_int_valid__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: reg_add_bf_valid__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: reg_out_int_valid__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: reg_out_bf_valid__dreg_update
+Predicate: True
+Blocking rules: (none)
+ 
+Rule: rl_mac_inputs
+Predicate: (! fp_mul_fifo_rv.port1__read[64]) &&
+	   (! int_mul_fifo_rv.port1__read[64]) &&
+	   reg_input_valid
+Blocking rules: (none)
+ 
+Rule: int_pipe_stage1
+Predicate: int_mul_fifo_rv.port0__read[64] &&
+	   (! int_add_fifo_rv.port1__read[64])
+Blocking rules: (none)
+ 
+Rule: fp_pipe_stage1
+Predicate: fp_mul_fifo_rv.port0__read[64] &&
+	   (! fp_add_fifo_rv.port1__read[64])
+Blocking rules: (none)
+ 
+Rule: int_pipe_stage2
+Predicate: int_add_fifo_rv.port0__read[64] &&
+	   (! int_out_fifo_rv.port1__read[32])
+Blocking rules: (none)
+ 
+Rule: fp_pipe_stage2
+Predicate: fp_add_fifo_rv.port0__read[64] &&
+	   (! fp_out_fifo_rv.port1__read[32])
+Blocking rules: (none)
+ 
+Rule: dequeue_int
+Predicate: int_out_fifo_rv.port0__read[32]
+Blocking rules: (none)
+ 
+Rule: dequeue_fp
+Predicate: fp_out_fifo_rv.port0__read[32]
+Blocking rules: (none)
+ 
+Logical execution order: mac_op,
+			 dequeue_int,
+			 int_pipe_stage2,
+			 int_pipe_stage1,
+			 dequeue_fp,
+			 fp_pipe_stage2,
+			 fp_pipe_stage1,
+			 rl_mac_inputs,
+			 get_inputs,
+			 reg_input_valid__dreg_update,
+			 reg_mult_int_valid__dreg_update,
+			 reg_mult_bf_valid__dreg_update,
+			 reg_add_int_valid__dreg_update,
+			 reg_add_bf_valid__dreg_update,
+			 reg_out_int_valid__dreg_update,
+			 reg_out_bf_valid__dreg_update
+
+=====================================

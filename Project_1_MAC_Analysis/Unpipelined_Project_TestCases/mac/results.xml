@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744779195" />
+    <testcase name="test_mac" classname="test_mac" file="/home/vignesh/ECE-633-Independent-Study/HLS-with-BSV-ECE633-Independent-Study/Project_1_MAC_Analysis/Unpipelined_Project_TestCases/mac/mac_verif/test_mac.py" lineno="115" time="2.1131174564361572" sim_time_ns="61485000.001" ratio_time="29096820.819745865" />
+  </testsuite>
+</testsuites>
