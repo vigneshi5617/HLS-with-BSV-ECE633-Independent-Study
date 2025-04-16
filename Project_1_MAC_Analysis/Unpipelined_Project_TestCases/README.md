@@ -6,11 +6,6 @@ The code works for 1049 int and 1000 float test cases and the performance is see
 
 
 Make a clone of the mac folder in this repo. Run the following commands.
-## To activate pyenv
-
-```
-pyenv activate py38
-```
 
 ## To setup cocotb (remove any older versions and install v1.6.2)
 ```
@@ -37,14 +32,10 @@ make clean_build
 
 
 
-
-
-Absolutely! Let's start with a **detailed, clean, and professional `README.md`** tailored for your **Unpipelined MAC Design** project under **ECE-633: High-Level Synthesis using Bluespec System Verilog**, assuming you're the sole contributor.
-
 ---
 
 ## 📘 ECE-633: Multiply-Accumulate (MAC) Design using Bluespec System Verilog  
-**Author**: Vignesh S  
+**Author**: Vignesh Anand  
 **Course**: High-Level Synthesis with Bluespec System Verilog  
 **Module**: Unpipelined MAC Unit  
 **Toolchain**: BSV Compiler (BSC) + Verilator + Cocotb  
